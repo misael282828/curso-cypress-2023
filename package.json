@@ -1,0 +1,19 @@
+{
+  "name": "projectofinal_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --browser chrome --headed",
+    "cy:run_browser": "cypress run --browser chrome",
+    "browser": "chrome",
+    "chromeWebSecurity": "false",
+    "testFiles": "**/*.cy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.3"
+  }
+}
