@@ -8,12 +8,14 @@
     "cy:run_browser": "cypress run --browser chrome",
     "browser": "chrome",
     "chromeWebSecurity": "false",
-    "testFiles": "**/*.cy.js"
+    "testFiles": "**/*.cy.js",
+    "allure": "npx cypress run --browser chrome --headed --env allure=true"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0",
     "cypress": "^12.17.3"
   }
 }
