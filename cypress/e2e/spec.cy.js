@@ -1,34 +1,28 @@
 import { LoginMethods } from "./pages/login/login.methods"
+import { singupMethods } from "./pages/singup/singup.methods"
 
 describe('template spec', () => {
-  it('passes', () => {
+
+  it('singup', () => {
     cy.visit('https://demoblaze.com/')
-    cy.get('a[data-target="#logInModal"]').click()
-    LoginMethods.login('Misael','clave')
-
-    cy.wait(3000)
-    cy.get('a#nameofuser').should('contain.text', 'Misael')
-    cy.wait(5000)
-
-    //recordar la version que esta usando npx cypress@12.13.0 run --env allure=true
+    cy.get('a[data-target="#signInModal"]').click()
+    singupMethods.singup('platano', 'pass')
+    cy.wait(2000)
+    // cy.get('a#nameofuser').should('contain', 'Dilan')
+    // cy.wait(5000)
+    //   //recordar la version que esta usando npx cypress@12.13.0 run --env allure=true
 
   })
 
-  // it('login', () => {
-  //   cy.visit('https://demoblaze.com/')
-  //   cy.get('a[data-target="#logInModal"]').click()
-  //   LoginMethods.insertUserNameSingIn('Misael')
-  //   LoginMethods.insertUserPassSingIn('123asd')
-  //   cy.get('a[data-target="#signInModal"]').click()
-  //   // LoginMethods.clickOnLoginButton()
-  //   cy.wait(2000)
-  //   cy.get('a#nameofuser').should('contain', 'Misael')
-  //   cy.wait(5000)
+  it('login', () => {
+    cy.visit('https://demoblaze.com/')
+    cy.get('a[data-target="#logInModal"]').click()
+    LoginMethods.login('platano', 'pass')
+    cy.get('a#nameofuser').should('contain.text', 'platano')
+    cy.wait(2000)
+    //recordar la version que esta usando npx cypress@12.13.0 run --env allure=true
 
-  //   //recordar la version que esta usando npx cypress@12.13.0 run --env allure=true
-
-  // })
-
+  })
 
 
 })
