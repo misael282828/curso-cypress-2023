@@ -1,4 +1,5 @@
 import { HomeMethods } from "./pages/home/home.methods"
+import { ProductDetails_Methods } from "./pages/home/product_details/product_details.methods"
 import { LoginMethods } from "./pages/login/login.methods"
 import { singupMethods } from "./pages/singup/singup.methods"
 
@@ -25,10 +26,14 @@ describe('template spec', () => {
 
   // })
 
-  it('click on product link ', ()=>{
+  it('click on product link ', () => {
     cy.visit('https://demoblaze.com/')
-    HomeMethods.clickOnProduct('Sony xperia z5')
-    cy.wait(3000)
+    HomeMethods.clickOnProduct('Samsung galaxy s6')
+    cy.wait(2000)
+    
+    // ProductDetails_Methods.clickOnAddToCartButton() 
+   
+
   })
 
 
