@@ -36,7 +36,7 @@ describe('template spec', () => {
     
   //   // ProductDetails_Methods.clickOnAddToCartButton() 
    
-
+ 
   // })
 
 
