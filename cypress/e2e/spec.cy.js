@@ -1,4 +1,5 @@
 import { CartMethods } from "./pages/cart/cart.methods"
+import { commonPageMethods } from "./pages/common-page/common-page.methods"
 import { LoginMethods } from "./pages/login/login.methods"
 import { singupMethods } from "./pages/singup/singup.methods"
 
@@ -25,18 +26,19 @@ describe('template spec', () => {
 
   // })
 
-  it('click on product link ', () => {
-    cy.visit('https://demoblaze.com/')
-    cy.wait(30000)
+  // it('click on product link ', () => {
+  //   cy.visit('https://demoblaze.com/')
+  //   cy.wait(30000)
 
-    CartMethods.clickOnDeleteLink('Samsung galaxy s6')
-   // HomeMethods.clickOnProduct('Samsung galaxy s6')
-    cy.wait(5000)
+  //   CartMethods.clickOnDeleteLink('Samsung galaxy s6')
+  //  // HomeMethods.clickOnProduct('Samsung galaxy s6')
+  //   cy.wait(5000)
     
-    // ProductDetails_Methods.clickOnAddToCartButton() 
+  //   // ProductDetails_Methods.clickOnAddToCartButton() 
    
 
-  })
+  // })
 
 
+  
 })

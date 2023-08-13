@@ -13,6 +13,10 @@ export class singupMethods{
     singupElements.button.singup.click();
   }
 
+  static clickOnSingupCloseButton(){
+    singupElements.button.close.click();
+  }
+
   static singup(username, password){
     this.inserUsername(username)
     this.inserpassword(password)
