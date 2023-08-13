@@ -6,9 +6,10 @@
   "scripts": {
     "generar-reporte":" allure generate allure-results -o allure-report --clean",
     "abrir-reporte":"allure open",
-    "ejecutar-pruebas": "npx cypress@12.13.0 run --headed --env allure=true",
+    "ejecutar-pruebas": "npx cypress@12.13.0 run --headed --browser chrome --env allure=true",
     "limpiar-reporte":"rimraf ./allure-report && rimraf ./allure-results",
-    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-reporte ",
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas & npm run generar-reporte && npm run abrir-reporte ",
+    "open":"npm run cypress --browser chrome --headed",
 
     "chromeWebSecurity": "false",
     "testFiles": "**/*.cy.js"
