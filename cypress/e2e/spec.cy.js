@@ -1,5 +1,4 @@
-import { HomeMethods } from "./pages/home/home.methods"
-import { ProductDetails_Methods } from "./pages/home/product_details/product_details.methods"
+import { CartMethods } from "./pages/cart/cart.methods"
 import { LoginMethods } from "./pages/login/login.methods"
 import { singupMethods } from "./pages/singup/singup.methods"
 
@@ -28,8 +27,11 @@ describe('template spec', () => {
 
   it('click on product link ', () => {
     cy.visit('https://demoblaze.com/')
-    HomeMethods.clickOnProduct('Samsung galaxy s6')
-    cy.wait(2000)
+    cy.wait(30000)
+
+    CartMethods.clickOnDeleteLink('Samsung galaxy s6')
+   // HomeMethods.clickOnProduct('Samsung galaxy s6')
+    cy.wait(5000)
     
     // ProductDetails_Methods.clickOnAddToCartButton() 
    
