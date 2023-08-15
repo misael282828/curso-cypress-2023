@@ -4,7 +4,7 @@ export class Logger{
     const text = `Step # ${number}`
     cy.log(text)
     cy.allure().step(text)
-
+    
   } 
 
   static step(description){
