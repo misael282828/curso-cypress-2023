@@ -1,3 +1,4 @@
+import { Logger } from "../../util/logger";
 import { LoginElements } from "./login.elemets";
 
 export class LoginMethods{
@@ -12,16 +13,12 @@ export class LoginMethods{
   }
 
   static login(username, password){
+    Logger.subStep('Insert username')
     this.insertUserName(username)
+    Logger.subStep('Insert password')
     this.insertPassoword(password)
+    Logger.subStep('Click on login button')
     this.clickOnLoginButton()
   }
 
-  // static insertUserNameSingIn(username){
-  //   LoginElements.texboxes.usernameSingIn.type(username)
-  // }
-
-  // static insertUserPassSingIn(username){
-  //   LoginElements.texboxes.usernamePassSingIn.type(username)
-  // }
 }
