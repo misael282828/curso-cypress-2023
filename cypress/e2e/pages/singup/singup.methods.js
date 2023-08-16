@@ -25,6 +25,7 @@ export class singupMethods{
   }
 
   static verifyAlertMessege(expectedMessage){
+    cy.wait(1000)
     commonPageMethods.verifyAlert(expectedMessage)
   }
 };
