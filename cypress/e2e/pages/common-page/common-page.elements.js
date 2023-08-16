@@ -26,5 +26,11 @@ export class commonPageElements{
         return cy.contains('a', "Sign up")
       },
     }
+
+   
+  }
+
+  static get signedUp(){
+    return cy.get('a#nameofuser')
   }
 }

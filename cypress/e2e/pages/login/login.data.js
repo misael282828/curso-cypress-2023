@@ -1,8 +1,8 @@
 export class LoginData{
-  static get invalidCredentials(){
+  static get validCredential(){
     return{
-      username:'abc',
-      password:'abc'
+      username:'platano',
+      password:'pass'
     };
   }
 }

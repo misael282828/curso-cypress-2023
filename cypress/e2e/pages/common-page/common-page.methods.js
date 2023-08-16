@@ -46,4 +46,8 @@ export class commonPageMethods {
   
     return randomString;
   }
+
+  static verifySingedUser(username){
+    commonPageElements.signedUp.should("have.text", `Welcome ${username}`)
+  }
 }
