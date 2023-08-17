@@ -7,4 +7,6 @@ export class ProductDetails_Elements {
       }
     }
   }
+
+ 
 }

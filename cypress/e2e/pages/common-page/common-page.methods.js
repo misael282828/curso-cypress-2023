@@ -29,7 +29,7 @@ export class commonPageMethods {
     commonPageElements.topMenu.singup.click()
   }
 
-  static verifyAlert(expectedMessage){
+  static verifyTextAlert(expectedMessage){
     cy.on('window:alert', (str) => {
       expect(str).to.equal(expectedMessage)
     })
