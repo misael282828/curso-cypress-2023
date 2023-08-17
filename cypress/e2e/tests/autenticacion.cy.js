@@ -1,3 +1,4 @@
+
 import { commonPageData } from "../pages/common-page/common-page.data";
 import { commonPageMethods } from "../pages/common-page/common-page.methods";
 import { LoginData } from "../pages/login/login.data";
@@ -51,7 +52,6 @@ describe(commonPageData.testSuites.autenticacion, ()=>{
     Logger.verification("Veridicar mensaje de alerta 'Wrong password.' ")
     singupMethods.verifyAlertMessege("Wrong password.")
   })
-
 
 
 })

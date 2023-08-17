@@ -1,5 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Aug 16 01:48:46 GMT-04:00 2023","Wed Aug 16 01:48:48 GMT-04:00 2023","1957","","Autenticacion","","","","Inicio de sesion invalido",""
-"passed","Wed Aug 16 01:48:58 GMT-04:00 2023","Wed Aug 16 01:49:00 GMT-04:00 2023","2132","","Registro","","","","Registro de usuario invalido",""
-"passed","Wed Aug 16 01:48:42 GMT-04:00 2023","Wed Aug 16 01:48:46 GMT-04:00 2023","3540","","Autenticacion","","","","Inicio de sesion valido",""
-"passed","Wed Aug 16 01:48:55 GMT-04:00 2023","Wed Aug 16 01:48:58 GMT-04:00 2023","3393","","Registro","","","","Registro de usuario valido",""
