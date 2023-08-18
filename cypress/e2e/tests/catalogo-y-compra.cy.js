@@ -86,7 +86,7 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
   });
 
 
-  it.only('Realizar una compra', () => {
+  it('Realizar una compra', () => {
    
     Logger.stepNumber(1)
     Logger.step("Navegar a la pagina de inicio")

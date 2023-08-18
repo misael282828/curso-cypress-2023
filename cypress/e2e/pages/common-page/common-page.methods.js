@@ -5,7 +5,10 @@ export class commonPageMethods {
 
   
   static navegateToDemoBlaze() {
-    cy.clearCookies()
+    
+    cy.clearAllCookies()
+    cy.clearLocalStorage()
+
     cy.visit(commonPageData.url)
   }
 
