@@ -7,6 +7,12 @@ export class CartMethods{
 
   static verifyProductAdded(productName){
     CartElements.links.delete(productName).should("be.visible")
+  }
+  static verifiCartPageIsShow(){
+    cy.url().should('include', 'cart.html')
+  }
 
+  static clickOnPlaceOrderButton(){
+    CartElements.buttons.placeOrder.click()
   }
 };

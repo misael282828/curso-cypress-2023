@@ -28,4 +28,6 @@ export class singupMethods{
     cy.wait(1000)
     commonPageMethods.verifyTextAlert(expectedMessage)
   }
+
+  
 };

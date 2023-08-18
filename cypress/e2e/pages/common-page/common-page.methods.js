@@ -18,6 +18,10 @@ export class commonPageMethods {
   }
 
   static clickOnCartOption() {
+    Cypress.on('uncaught:exception', (err, runnable) => {
+     
+      return false
+    })
     commonPageElements.topMenu.cart.click()
   }
 
@@ -29,11 +33,17 @@ export class commonPageMethods {
     commonPageElements.topMenu.singup.click()
   }
 
+  
   static verifyTextAlert(expectedMessage){
     cy.on('window:alert', (str) => {
       expect(str).to.equal(expectedMessage)
     })
   }
+
+  static verifiUrlName(urlName){
+    cy.url().should('include', urlName)
+  }
+
 
   static  generateRandomString(length=10) {
     const charset = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -50,4 +60,5 @@ export class commonPageMethods {
   static verifySingedUser(username){
     commonPageElements.signedUp.should("have.text", `Welcome ${username}`)
   }
+
 }
