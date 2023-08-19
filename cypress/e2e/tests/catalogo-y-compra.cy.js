@@ -41,7 +41,7 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     
     // validar si esta clase esta presente 2 veces, indicando los articulos que tiene esta clase  
     cy.get(".card-img-top").should("have.length", 2);
-
+    
   });
 
   

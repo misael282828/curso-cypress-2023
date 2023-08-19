@@ -64,4 +64,16 @@ export class commonPageMethods {
     commonPageElements.signedUp.should("have.text", `Welcome ${username}`)
   }
 
+  //esta funcion busca el elemento este presente para darle click
+  // si no esta presente hace un log 'no hay usuario logeado'
+    static logout(){
+      cy.get('body').then($body=>{
+        if($body.find('#logout2').length>0){
+          commonPageElements.topMenu.logout.click()
+        }else{
+          cy.log("no hay usuario logeado") 
+        }
+      })
+    }
+
 }

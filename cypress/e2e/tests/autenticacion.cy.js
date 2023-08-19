@@ -6,7 +6,7 @@ import { LoginMethods } from "../pages/login/login.methods";
 import { singupMethods } from "../pages/singup/singup.methods";
 import { Logger } from "../util/logger";
 
-const existinUser= LoginData.validCredential.username
+ const existinUser= LoginData.validCredential.username
 
 describe(commonPageData.testSuites.autenticacion, ()=>{
   it("Inicio de sesion valido", ()=>{
@@ -20,7 +20,7 @@ describe(commonPageData.testSuites.autenticacion, ()=>{
 
     Logger.stepNumber(3)
     Logger.step("Completar los campos con informacion valida' ")
-    LoginMethods.insertUserName(existinUser)
+    LoginMethods.insertUserName(LoginData.validCredential.username)
     LoginMethods.insertPassoword(LoginData.validCredential.password)
 
     
@@ -29,6 +29,11 @@ describe(commonPageData.testSuites.autenticacion, ()=>{
     LoginMethods.clickOnLoginButton()
     Logger.verification("Veridicar mensaje de alerta 'Welcome' ")
     commonPageMethods.verifySingedUser(existinUser)
+
+
+    Logger.postCondition("Log out")
+    commonPageMethods.logout()
+    cy.screenshot('Inicio de sesion valido')
   })
 
   it("Inicio de sesion invalido", ()=>{

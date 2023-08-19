@@ -25,6 +25,9 @@ export class commonPageElements{
       get singup(){
         return cy.contains('a', "Sign up")
       },
+      get logout(){
+        return cy.get("#logout2")
+      }
     }
 
    
@@ -33,4 +36,7 @@ export class commonPageElements{
   static get signedUp(){
     return cy.get('a#nameofuser')
   }
+
+  
+
 }
