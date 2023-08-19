@@ -8,14 +8,12 @@ import { placeOrderData } from "../pages/place-order/place-order.data";
 import { placeOrderMethods } from "../pages/place-order/place-order.methods";
 import { ProductDetails_Methods } from "../pages/product-details/product_details.methods";
 import { PurchaseMethods } from "../pages/thankyou-purchase/purchaseMethods";
-
-
-
-
 import { Logger } from "../util/logger";
+
 
 const user = LoginData.validCredential;
 const product = "ASUS Full HD"
+
 describe(commonPageData.testSuites.catalogoycompras,()=>{
   it('Navegacion por categoria', () => {
    
@@ -38,9 +36,12 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     Logger.verification("Verificar que se muestra la lista de productos correspondiente a la categor seleccionada.")
     // HomeMethods.verifyProductIsDisplay("Apple monitor 24")
     // HomeMethods.verifyProductIsDisplay("ASUS Full HD")
-    
+  
     // validar si esta clase esta presente 2 veces, indicando los articulos que tiene esta clase  
     cy.get(".card-img-top").should("have.length", 2);
+
+    Logger.postCondition("Log out")
+    commonPageMethods.logout()
     
   });
 
@@ -83,6 +84,11 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     commonPageMethods.clickOnCartOption()
     CartMethods.verifyProductAdded(product)
 
+    // cy.wait(5000)
+    Logger.postCondition("Limpiar carrito y hacer 'Logout'")
+    CartMethods.emptyCart(user.username, user.password)
+    cy.wait(1000)
+    commonPageMethods.logout()
   });
 
 
@@ -142,7 +148,7 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     placeOrderMethods.inserOrderInformation(placeOrderData.testData)
 
     Logger.stepNumber(12)
-    Logger.verification("Hacr click en place order")
+    Logger.verification("Hacer click en place order")
     placeOrderMethods.clickOnPurchaseButton()
 
     
@@ -152,14 +158,15 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     PurchaseMethods.greenMarkDisplayed()
     cy.wait(3000)
     PurchaseMethods.clickOnOkButton()
-    PurchaseMethods.lol()
+   
     commonPageMethods.verifiUrlName('index.html')
+   
+
+    Logger.stepNumber(14)
+    Logger.step('Haciendo log out')
+    commonPageMethods.logout()
 
 
-
-
-
-    
   });
 })
 

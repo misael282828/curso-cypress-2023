@@ -6,8 +6,8 @@ export class commonPageMethods {
   
   static navegateToDemoBlaze() {
     
-    cy.clearAllCookies()
-    cy.clearLocalStorage()
+    // cy.clearAllCookies()
+    // cy.clearLocalStorage()
 
     cy.visit(commonPageData.url)
   }

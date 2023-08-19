@@ -33,7 +33,8 @@ describe(commonPageData.testSuites.autenticacion, ()=>{
 
     Logger.postCondition("Log out")
     commonPageMethods.logout()
-    cy.screenshot('Inicio de sesion valido')
+   // cy.screenshot('Inicio de sesion valido')
+
   })
 
   it("Inicio de sesion invalido", ()=>{

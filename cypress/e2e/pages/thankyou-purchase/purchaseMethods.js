@@ -10,7 +10,5 @@ export class PurchaseMethods {
   static  greenMarkDisplayed() {
     PurchaseElements.icon.greenCheckMark.should("exist");
   }
-  static  lol(){
-    cy.log("platanos maduros desde PurchaseMethods")
-  }
+ 
 }

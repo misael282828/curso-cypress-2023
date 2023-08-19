@@ -48,7 +48,7 @@ describe(commonPageData.testSuites.registro,()=>{
     Logger.step("Completar los campos con informacion invalida' ")
     singupMethods.inserUsername(existingUser)
     singupMethods.inserpassword(password)
-    // cy.wait(3000)
+  
    
     Logger.stepNumber(4)
     Logger.step('Hacer click en el boton "Sing up" ')
