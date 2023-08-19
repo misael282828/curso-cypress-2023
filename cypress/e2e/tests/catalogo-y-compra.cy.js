@@ -156,9 +156,7 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     Logger.verification("Verificar que se muestre el mensaje de confirmacion y redirige a la parina de inicio")
     // cy.wait(3000)
     PurchaseMethods.greenMarkDisplayed()
-    cy.wait(3000)
     PurchaseMethods.clickOnOkButton()
-   
     commonPageMethods.verifiUrlName('index.html')
    
 

@@ -4,6 +4,7 @@ export class PurchaseMethods {
   
   
   static  clickOnOkButton() {
+    cy.wait(1000)
     PurchaseElements.buttons.ok.click();
   }
 
