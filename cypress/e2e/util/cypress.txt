@@ -81,4 +81,5 @@ Algunos ejemplos de los métodos `should()` en Cypress:
 - `cy.should('have.text', 'texto esperado')`
 - `cy.should('contain', 'texto esperado')`
 - `cy.should('have.class', 'clase-esperada')`
-
+ 
+   

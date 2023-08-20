@@ -10,12 +10,12 @@
    ```
    npm install allure-commandline --save-dev
    ```
-
+  
 3. **Instalar Cypress Parallel:**
    ```
    npm install -g cypress-parallel
    ```
-
+  
 4. **Instalar el Complemento de Allure para Cypress:**
    ```
    npm install @shelex/cypress-allure-plugin --save-dev
