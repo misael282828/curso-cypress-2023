@@ -84,7 +84,7 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     commonPageMethods.clickOnCartOption()
     CartMethods.verifyProductAdded(product)
 
-    // cy.wait(5000)
+    
     Logger.postCondition("Limpiar carrito y hacer 'Logout'")
     CartMethods.emptyCart(user.username, user.password)
     cy.wait(1000)
@@ -154,7 +154,7 @@ describe(commonPageData.testSuites.catalogoycompras,()=>{
     
     Logger.stepNumber(13)
     Logger.verification("Verificar que se muestre el mensaje de confirmacion y redirige a la parina de inicio")
-    // cy.wait(3000)
+    
     PurchaseMethods.greenMarkDisplayed()
     PurchaseMethods.clickOnOkButton()
     commonPageMethods.verifiUrlName('index.html')
