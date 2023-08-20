@@ -75,11 +75,11 @@ Algunos de los métodos más utilizados en Cypress son:
 ## Métodos Should en Cypress
 
 Algunos ejemplos de los métodos `should()` en Cypress:
-
+ 
 - `cy.should('exist')`
 - `cy.should('be.visible')`
 - `cy.should('have.text', 'texto esperado')`
 - `cy.should('contain', 'texto esperado')`
 - `cy.should('have.class', 'clase-esperada')`
  
-   
+   continuaremos ....
